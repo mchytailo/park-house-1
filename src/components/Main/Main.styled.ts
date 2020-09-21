@@ -5,6 +5,7 @@ export const MainWrapper = styled.div`
     height: 200vh;
     position: relative;
     z-index: 1;
+    pointer-events: none;
     @media (max-width: ${size.tablet}) { 
         height: 130vh;
     }
