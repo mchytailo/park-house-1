@@ -6,17 +6,19 @@ export const IntroWrapper = styled.div`
     flex-direction: column;
     color: white;
     padding-left: 170px;
-    max-width: 600px;
+    max-width: 560px;
     transition: .3s;
-    @media (max-width: ${size.desktop}) { 
+    @media (max-width: ${size.laptop}) { 
         padding-left: 90px;
     }
     @media (max-width: ${size.tablet}) {    
-        padding-left: 13%;
+        padding-left: 10%;
+        padding-right: 10%;
     }
     
     @media (max-width: ${size.mobile}) { 
         padding-left: 0;
+        padding-right: 0;
     }
     `
 export const IntroText = styled.p`
@@ -27,7 +29,7 @@ export const IntroText = styled.p`
     color: #FFFFFF;
     margin-bottom: 56px;
     
-    @media (max-width: ${size.desktop}) {
+    @media (max-width: ${size.laptop}) {
         font: normal normal normal 22px/34px Optima;
         margin-bottom: 40px;
     }
@@ -43,7 +45,7 @@ export const IntroLabel = styled.p`
     letter-spacing: 5.5px;
     color: #FFFFFF;
     text-transform: uppercase;
-    @media (max-width: ${size.desktop}) {
+    @media (max-width: ${size.laptop}) {
         font: normal normal normal 18px/32px Optima;
         letter-spacing: 4.5px;
     }

@@ -17,11 +17,7 @@ export const HeaderLinkFixed = styled.a`
     -khtml-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    user-select: none;
-    
-    @media (min-width: ${size.laptop}) { 
-        top: 48px;
-    }
+    user-select: none !important;
     
     @media (min-width: ${size.laptop}) { 
         top: 48px;

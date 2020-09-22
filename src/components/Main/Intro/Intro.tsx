@@ -5,9 +5,10 @@ const Intro: FC = () => {
     return (
         <IntroWrapper>
             <IntroText>
-                Newport Beach residences designed for effortless living. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit. Aliquid eos et illum odit praesentium quod reiciendis soluta
-                temporibus ut vero.
+                Newport Beach residences designed for effortless living.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.
             </IntroText>
             <IntroLabel>Luxury condominium residences</IntroLabel>
             <IntroLabel>Starting from $1.9M</IntroLabel>

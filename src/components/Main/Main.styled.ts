@@ -18,8 +18,8 @@ export const MainSection = styled.div`
     flex-direction: column;
     justify-content: space-between;
     max-height: 780px;
-    height: calc(100% - 200px);
-    padding: 100px 140px;
+    padding: 128px 140px 200px;
+    height: calc(100% - 328px);
     position: fixed;
     top: 0;
     bottom: 0;
@@ -27,15 +27,18 @@ export const MainSection = styled.div`
     left: 0;
     z-index: 10;
     
-    @media (min-width: ${size.laptop}) {
-        padding: 128px 140px 200px;
-        height: calc(100% - 328px);
+    @media (max-width: ${size.laptop}) {
+        height: auto;
+        max-height: 500px;
+        padding: 100px 140px;
     }
     
     @media (max-width: ${size.tablet}) {
         padding: 70px 5%;
-        height: auto;
-        max-height: 500px;
+    }
+    @media (max-width: ${size.mobile}) {
+        justify-content: initial;
+        padding: 30px 5%;
     }
     `
 export const MainBackground = styled.div`
@@ -61,4 +64,12 @@ export const MainBuildingImg = styled.img`
     min-width: 104vh;
     object-fit: cover;
     object-position: 0;
+    `
+
+export const MainSectionIntro = styled.div`
+    @media (max-width: ${size.mobile}) { 
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
     `

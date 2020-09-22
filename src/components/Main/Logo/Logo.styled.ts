@@ -8,7 +8,7 @@ export const LogoWrapper = styled.div`
     max-width: 100%;
     width: 360px;
     max-width: 720px;
-    @media (max-width: ${size.desktop}) {
+    @media (max-width: ${size.laptop}) {
         max-width: 400px;
     }
     @media (min-width: ${size.tablet}) {

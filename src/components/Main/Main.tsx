@@ -1,5 +1,5 @@
 import React, {FC, RefObject} from 'react';
-import {MainBackground, MainBuildingImg, MainSection, MainWrapper} from "./Main.styled";
+import {MainBackground, MainBuildingImg, MainSection, MainSectionIntro, MainWrapper} from "./Main.styled";
 import Logo from "./Logo/Logo";
 import {Tween} from "react-gsap";
 import Intro from "./Intro/Intro";
@@ -20,9 +20,9 @@ const Main: FC<IProps> = ({currentProgress, contentMainRef}) => {
                     paused
                     totalProgress={currentProgress}
                 >
-                    <div>
+                    <MainSectionIntro>
                         <Logo/>
-                    </div>
+                    </MainSectionIntro>
                 </Tween>
 
                 <Tween
