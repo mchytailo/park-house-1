@@ -97,7 +97,7 @@ export const ContactSection = styled.div`
             }
         }
         
-         @media (max-width: ${size.tablet}) {
+         @media (max-width: 1500px) {
             .ao-block-wrapper {
                 padding: 0 !important;
             }
