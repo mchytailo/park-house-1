@@ -8,7 +8,6 @@ import Content from "./Content/Content";
 
 const App: FC = () => {
     const headerRef = useRef<HTMLDivElement>(null)
-    const contentMainRef = useRef<HTMLDivElement>(null)
     const contactRef = useRef<HTMLDivElement>(null)
     const windowWidth = window.innerWidth;
     return (
@@ -30,7 +29,7 @@ const App: FC = () => {
                                 <MainWrapper>
                                     <Main
                                         currentProgress={progress}
-                                        contentMainRef={contentMainRef}
+                                        contactRef={contactRef}
                                     />
                                 </MainWrapper>
                             );

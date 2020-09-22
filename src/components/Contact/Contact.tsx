@@ -24,7 +24,7 @@ const Contact: FC<IProps> = ({contactRef, windowWidth}) => {
         const checkErrors = document.getElementsByClassName('ao-form-error').length;
         if (!checkErrors) {
             window.scrollTo({
-                top: contactRef && contactRef.current && contactRef.current.offsetTop - 100 || 0,
+                top: contactRef && contactRef.current && contactRef.current.offsetTop || 0,
             })
         }
     }
