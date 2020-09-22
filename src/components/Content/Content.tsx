@@ -13,6 +13,7 @@ const Content: FC<IProps> = ({contactRef, windowWidth, currentProgress}) => {
     useEffect(() => {
         const headerElement = document.getElementsByClassName('header-fixed')[0] as HTMLElement
         headerElement && (headerElement.style.opacity = String(1 - currentProgress))
+        headerElement && (headerElement.style.visibility = currentProgress === 1 ? 'hidden' : 'visible')
     })
     return (
         <ContentWrapper

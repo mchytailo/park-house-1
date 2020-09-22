@@ -5,7 +5,6 @@ export const MainWrapper = styled.div`
     height: 200vh;
     position: relative;
     z-index: 1;
-    pointer-events: none;
     @media (max-width: ${size.tablet}) { 
         height: 130vh;
     }
@@ -67,9 +66,9 @@ export const MainBuildingImg = styled.img`
     `
 
 export const MainSectionIntro = styled.div`
-    @media (max-width: ${size.mobile}) { 
+    @media (max-width: ${size.mobile}) {
+        margin: 20px 0 40px; 
         display: flex;
-        height: 100%;
         align-items: center;
     }
     `
