@@ -32,6 +32,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 `;
 export const size = {
+    mobileS: '359.98px',
     mobile: '575.98px',
     tabletS: '767.98px',
     tablet: '991.98px',

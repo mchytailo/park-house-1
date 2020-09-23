@@ -16,10 +16,17 @@ const Content: FC<IProps> = ({contactRef, windowWidth, currentProgress}) => {
             headerElement.style.opacity = String(1 - currentProgress);
             headerElement.style.visibility = currentProgress === 1 ? 'hidden' : 'visible';
             if (currentProgress > 0 && windowWidth < 576) {
-                headerElement.style.bottom = 'calc(' + (currentProgress * 100) + 'vh + 60px)';
-            }
-            else if (currentProgress === 0 && windowWidth < 576){
-                headerElement.style.bottom = '60px';
+                if (windowWidth >= 360) {
+                    headerElement.style.bottom = 'calc(' + (currentProgress * 100) + 'vh + 60px)';
+                } else {
+                    headerElement.style.bottom = 'calc(' + (currentProgress * 100) + 'vh + 40px)';
+                }
+            } else if (currentProgress === 0 && windowWidth < 576) {
+                if (windowWidth >= 360) {
+                    headerElement.style.bottom = '60px';
+                } else {
+                    headerElement.style.bottom = '40px';
+                }
             }
         }
     })

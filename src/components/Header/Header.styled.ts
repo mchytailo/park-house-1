@@ -38,4 +38,9 @@ export const HeaderLinkFixed = styled.div`
         bottom: 60px;
         right: 24px;
      }
+    @media (max-width: ${size.mobileS}) { 
+        top: auto;
+        bottom: 40px;
+        right: 24px;
+     }
     `
