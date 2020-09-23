@@ -7,13 +7,11 @@ import {MainWrapper} from "./Main/Main.styled";
 import Content from "./Content/Content";
 
 const App: FC = () => {
-    const headerRef = useRef<HTMLDivElement>(null)
     const contactRef = useRef<HTMLDivElement>(null)
     const windowWidth = window.innerWidth;
     return (
         <>
             <Header
-                headerRef={headerRef}
                 contactRef={contactRef}
             />
             <div className={'scrollmagic-container'}>

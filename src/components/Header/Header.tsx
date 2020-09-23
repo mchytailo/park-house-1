@@ -2,7 +2,6 @@ import React, {FC, RefObject} from 'react';
 import {HeaderLinkFixed} from "./Header.styled";
 
 interface IProps {
-    headerRef: RefObject<HTMLDivElement> | null,
     contactRef: RefObject<HTMLDivElement> | null
 }
 

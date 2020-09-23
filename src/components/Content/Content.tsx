@@ -12,8 +12,13 @@ interface IProps {
 const Content: FC<IProps> = ({contactRef, windowWidth, currentProgress}) => {
     useEffect(() => {
         const headerElement = document.getElementsByClassName('header-fixed')[0] as HTMLElement
-        headerElement && (headerElement.style.opacity = String(1 - currentProgress))
-        headerElement && (headerElement.style.visibility = currentProgress === 1 ? 'hidden' : 'visible')
+        if (headerElement) {
+            headerElement.style.opacity = String(1 - currentProgress);
+            headerElement.style.visibility = currentProgress === 1 ? 'hidden' : 'visible';
+            if (currentProgress > 0 && windowWidth < 576) {
+                headerElement.style.bottom = 'calc(' + (currentProgress * 100) + 'vh + 40px)';
+            }
+        }
     })
     return (
         <ContentWrapper

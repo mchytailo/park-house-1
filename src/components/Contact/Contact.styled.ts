@@ -34,15 +34,16 @@ export const ContactSection = styled.div`
         input[type=checkbox]+span, 
         input[type=radio]+span {
             display: block;
-            font: normal normal bold 16px/24px Optima;
-            letter-spacing: 4.32px;
+            font: normal normal bold 18px/24px Optima ;
+            letter-spacing: 4px;
             padding-left: 30px;
             position: relative;
             cursor: pointer;
             color: white;
-            @media (min-width: 1500px) { 
-                letter-spacing: 4px;
-                font: normal normal bold 18px/24px Optima ;
+            
+            @media (max-width: ${size.desktop}) { 
+                font: normal normal bold 16px/24px Optima;
+                letter-spacing: 2px;
             }
         }
         
@@ -62,9 +63,9 @@ export const ContactSection = styled.div`
             color: white;
             user-select: none;
             
-            @media (max-width: 1500px) { 
+            @media (max-width: ${size.desktop}) { 
                 font: normal normal bold 16px/24px Optima;
-                letter-spacing: 1.3px;
+                letter-spacing: 2px;
             }
             @media (max-width: ${size.tablet}) {
                 letter-spacing: 4px;
@@ -289,8 +290,12 @@ export const ContactSection = styled.div`
                 border: 3px solid white !important;
                 color: white;
                 &:hover{
-                    background: white ;
+                    background: white;
                     color: rgb(158, 166, 156) 
+                }
+                @media (max-width: ${size.desktop}) {
+                    font: normal normal normal 20px/28px Optima;
+                    letter-spacing: 2px;
                 }
                 @media (max-width: ${size.tablet}) {
                     width: 100%;
@@ -341,8 +346,10 @@ export const ContactText = styled.div`
     color: #FFFFFF;
     margin-bottom: 80px;
     user-select: none;
+    @media (max-width: ${size.desktop}) {
+        font: normal normal normal 24px/32px Optima;
+    }
     @media (max-width: ${size.laptop}) {
-       font: normal normal normal 24px/32px Optima;
        margin-bottom: 64px;
     }
     @media (max-width: ${size.tablet}) {
@@ -357,8 +364,12 @@ export const ContactHeader = styled.h2`
     color: #FFFFFF;
     text-transform: uppercase;
     margin-bottom: 70px;
-    
     user-select: none;
+    
+    @media (max-width: ${size.desktop}) {
+        font: normal normal normal 40px/48px Optima;
+        letter-spacing: 8px;
+    }
     @media (max-width: ${size.laptop}) {
        font: normal normal normal 36px/44px Optima;
        letter-spacing: 7px;

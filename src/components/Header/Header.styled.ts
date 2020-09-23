@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {size} from "../../styles/Global.styled";
 
-export const HeaderLinkFixed = styled.a` 
+export const HeaderLinkFixed = styled.div` 
     font: normal normal normal 18px/55px Optima;
     letter-spacing: 5.4px;
     color: #fff;

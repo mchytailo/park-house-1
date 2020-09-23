@@ -35,5 +35,6 @@ export const size = {
     mobile: '575.98px',
     tabletS: '767.98px',
     tablet: '991.98px',
-    laptop: '1199.98px'
+    laptop: '1199.98px',
+    desktop: '1679.98px'
 }
