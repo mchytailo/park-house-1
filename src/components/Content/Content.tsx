@@ -18,6 +18,9 @@ const Content: FC<IProps> = ({contactRef, windowWidth, currentProgress}) => {
             if (currentProgress > 0 && windowWidth < 576) {
                 headerElement.style.bottom = 'calc(' + (currentProgress * 100) + 'vh + 40px)';
             }
+            else if (currentProgress === 0 && windowWidth < 576){
+                headerElement.style.bottom = '60px';
+            }
         }
     })
     return (

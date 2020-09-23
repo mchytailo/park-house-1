@@ -9,7 +9,7 @@ export const MainWrapper = styled.div`
         height: 130vh;
     }
     @media (max-width: ${size.mobile}) { 
-        height: 170vh;
+        height: 185vh;
     }
     `
 export const MainSection = styled.div`
@@ -48,7 +48,7 @@ export const MainBackground = styled.div`
         height: 130vh;
     }
     @media (max-width: ${size.mobile}) { 
-        height: 170vh;
+        height: 185vh;
     }
     `
 

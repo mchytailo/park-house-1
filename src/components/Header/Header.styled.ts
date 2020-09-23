@@ -35,7 +35,7 @@ export const HeaderLinkFixed = styled.div`
     
     @media (max-width: ${size.mobile}) { 
         top: auto;
-        bottom: 40px;
+        bottom: 60px;
         right: 24px;
      }
     `

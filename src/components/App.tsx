@@ -19,7 +19,7 @@ const App: FC = () => {
                 <Controller>
                     <Scene
                         duration={windowWidth > 991.98 ? '100%' :
-                            windowWidth < 576 ? '70%' : '30%'}
+                            windowWidth < 576 ? '85%' : '30%'}
                         triggerHook={'onLeave'}
                     >
                         {function (progress: number) {
