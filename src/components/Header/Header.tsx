@@ -1,5 +1,5 @@
 import React, {FC, RefObject} from 'react';
-import {HeaderLinkFixed} from "./Header.styled";
+import {HeaderLink, HeaderLinkFixed} from "./Header.styled";
 
 interface IProps {
     contactRef: RefObject<HTMLDivElement> | null
@@ -12,10 +12,11 @@ const Header: FC<IProps> = ({contactRef}) => {
     })}
 
     return (
-        <HeaderLinkFixed
+        <HeaderLink
             onClick={executeScroll}
             className={'header-fixed'}
-        >Contact</HeaderLinkFixed>
+            style={{position: 'fixed'}}
+        >Contact</HeaderLink>
     )
 }
 

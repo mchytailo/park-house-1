@@ -4,7 +4,6 @@ import {size} from "../../../styles/Global.styled";
 export const LogoWrapper = styled.div`
     display: flex;
     margin-bottom: 80px;
-    transition: 1s;
     max-width: 100%;
     width: 360px;
     max-width: 720px;

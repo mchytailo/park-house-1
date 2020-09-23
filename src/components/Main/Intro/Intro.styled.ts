@@ -7,7 +7,6 @@ export const IntroWrapper = styled.div`
     color: white;
     padding-left: 170px;
     max-width: 560px;
-    transition: .3s;
     @media (max-width: ${size.laptop}) { 
         padding-left: 90px;
     }

@@ -11,23 +11,22 @@ interface IProps {
 
 const Content: FC<IProps> = ({contactRef, windowWidth, currentProgress}) => {
     useEffect(() => {
-        const headerElement = document.getElementsByClassName('header-fixed')[0] as HTMLElement
-        if (headerElement) {
-            headerElement.style.opacity = String(1 - currentProgress);
-            headerElement.style.visibility = currentProgress === 1 ? 'hidden' : 'visible';
-            if (currentProgress > 0 && windowWidth < 576) {
-                if (windowWidth >= 360) {
-                    headerElement.style.bottom = 'calc(' + (currentProgress * 100) + 'vh + 60px)';
-                } else {
-                    headerElement.style.bottom = 'calc(' + (currentProgress * 100) + 'vh + 40px)';
-                }
-            } else if (currentProgress === 0 && windowWidth < 576) {
-                if (windowWidth >= 360) {
-                    headerElement.style.bottom = '60px';
-                } else {
-                    headerElement.style.bottom = '40px';
-                }
+        const headerElementFixed = document.getElementsByClassName('header-fixed')[0] as HTMLElement;
+        const headerAbsoluteElement = document.getElementsByClassName('header-absolute')[0] as HTMLElement;
+        if (windowWidth < 576) {
+            headerAbsoluteElement.style.opacity = String(1 - currentProgress);
+            headerAbsoluteElement.style.visibility = currentProgress === 1 ? 'hidden' : 'visible';
+            if (currentProgress > 0) {
+                headerElementFixed.style.display = 'none';
+                headerAbsoluteElement.style.display = 'block';
+
+            } else if (currentProgress === 0) {
+                headerElementFixed.style.display = 'block';
+                headerAbsoluteElement.style.display = 'none';
             }
+        } else {
+            headerElementFixed.style.opacity = String(1 - currentProgress);
+            headerElementFixed.style.visibility = currentProgress === 1 ? 'hidden' : 'visible';
         }
     })
     return (

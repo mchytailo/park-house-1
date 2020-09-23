@@ -57,7 +57,6 @@ export const MainBuildingImg = styled.img`
     bottom: 0;
     left: 0;
     pointer-events: none;
-    transition: .1s;
     width: 100%;
     min-height: 100%;
     min-width: 104vh;

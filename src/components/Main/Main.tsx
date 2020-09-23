@@ -4,6 +4,7 @@ import Logo from "./Logo/Logo";
 import {Tween} from "react-gsap";
 import Intro from "./Intro/Intro";
 import contentImage from "../../assets/images/main-building.jpg";
+import {HeaderLink} from "../Header/Header.styled";
 
 interface IProps {
 	currentProgress: number,
@@ -17,6 +18,12 @@ const Main: FC<IProps> = ({currentProgress, contactRef}) => {
 			contactBlock.style.visibility = currentProgress === 0 ? 'hidden' : 'visible';
 		}
 	});
+
+	const executeScroll = () => {
+		window.scrollTo({
+			top: contactRef && contactRef.current && contactRef.current.offsetTop || 0,
+		})}
+
 	return (
 		<MainWrapper>
 			<MainSection
@@ -55,6 +62,12 @@ const Main: FC<IProps> = ({currentProgress, contactRef}) => {
 					src={contentImage}
 					alt=""
 				/>
+
+				<HeaderLink
+					onClick={executeScroll}
+					className={'header-absolute'}
+					style={{position: 'absolute', display: 'none'}}
+				>Contact</HeaderLink>
 			</MainBackground>
 		</MainWrapper>);
 };
