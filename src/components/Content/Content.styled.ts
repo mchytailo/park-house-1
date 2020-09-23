@@ -6,5 +6,6 @@ export const ContentWrapper = styled.div`
 
 export const ContentSection = styled.div`
     position: relative;
+    width: 100vw;
     top: 0;
     `

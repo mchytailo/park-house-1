@@ -19,7 +19,9 @@ const Main: FC<IProps> = ({currentProgress, contactRef}) => {
 	});
 	return (
 		<MainWrapper>
-			<MainSection>
+			<MainSection
+				style={{pointerEvents: currentProgress === 1 ? 'none' : 'auto'}}
+			>
 				<Tween
 					from={{opacity: 1}}
 					to={{opacity: 0}}
