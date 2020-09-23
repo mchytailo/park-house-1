@@ -65,9 +65,7 @@ export const MainBuildingImg = styled.img`
     `
 
 export const MainSectionIntro = styled.div`
-    @media (max-width: ${size.mobile}) {
-        margin: 20px 0 40px; 
-        display: flex;
-        align-items: center;
-    }
+    display: flex;
+    height: 100%;
+    align-items: center;
     `

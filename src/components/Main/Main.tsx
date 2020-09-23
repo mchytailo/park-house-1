@@ -36,9 +36,9 @@ const Main: FC<IProps> = ({currentProgress, contactRef}) => {
                     paused
                     totalProgress={currentProgress}
                 >
-                    <MainSectionIntro>
+                    <div>
                         <Logo/>
-                    </MainSectionIntro>
+                    </div>
                 </Tween>
 
                 <Tween
@@ -53,10 +53,9 @@ const Main: FC<IProps> = ({currentProgress, contactRef}) => {
                     paused
                     totalProgress={currentProgress}
                 >
-                    <div style={{
-                    }}>
+                    <MainSectionIntro>
                         <Intro/>
-                    </div>
+                    </MainSectionIntro>
                 </Tween>
             </MainSection>
             <MainBackground>
