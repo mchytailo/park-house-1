@@ -7,8 +7,12 @@ export const IntroWrapper = styled.div`
     color: white;
     padding-left: 170px;
     max-width: 560px;
+    @media (max-width: ${size.desktop}) { 
+        padding-left: 150px;
+        max-width: 510px;
+    }
     @media (max-width: ${size.laptop}) { 
-        padding-left: 90px;
+        padding-left: 95px;
     }
     @media (max-width: ${size.tablet}) {    
         padding-left: 10%;

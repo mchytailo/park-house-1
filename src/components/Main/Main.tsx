@@ -7,69 +7,71 @@ import contentImage from "../../assets/images/main-building.jpg";
 import {HeaderLink} from "../Header/Header.styled";
 
 interface IProps {
-	currentProgress: number,
-	contactRef: RefObject<HTMLDivElement> | null
+    currentProgress: number,
+    contactRef: RefObject<HTMLDivElement> | null
 }
 
 const Main: FC<IProps> = ({currentProgress, contactRef}) => {
-	useEffect(() => {
-		let contactBlock = contactRef && contactRef.current || null;
-		if(contactBlock){
-			contactBlock.style.visibility = currentProgress === 0 ? 'hidden' : 'visible';
-		}
-	});
+    useEffect(() => {
+        let contactBlock = contactRef && contactRef.current || null;
+        if (contactBlock) {
+            contactBlock.style.visibility = currentProgress === 0 ? 'hidden' : 'visible';
+        }
+    });
 
-	const executeScroll = () => {
-		window.scrollTo({
-			top: contactRef && contactRef.current && contactRef.current.offsetTop || 0,
-		})}
+    const executeScroll = () => {
+        window.scrollTo({
+            top: contactRef && contactRef.current && contactRef.current.offsetTop || 0,
+        })
+    }
 
-	return (
-		<MainWrapper>
-			<MainSection
-				style={{pointerEvents: currentProgress === 1 ? 'none' : 'auto'}}
-			>
-				<Tween
-					from={{opacity: 1}}
-					to={{opacity: 0}}
-					paused
-					totalProgress={currentProgress}
-				>
-					<MainSectionIntro>
-						<Logo/>
-					</MainSectionIntro>
-				</Tween>
+    return (
+        <MainWrapper>
+            <MainSection
+                style={{pointerEvents: currentProgress === 1 ? 'none' : 'auto'}}
+            >
+                <Tween
+                    from={{opacity: 1}}
+                    to={{opacity: 0}}
+                    paused
+                    totalProgress={currentProgress}
+                >
+                    <MainSectionIntro>
+                        <Logo/>
+                    </MainSectionIntro>
+                </Tween>
 
-				<Tween
-					from={{
-						opacity: 1,
-						x: 0
-					}}
-					to={{
-						opacity: 0,
-						x: '-40vw'
-					}}
-					paused
-					totalProgress={currentProgress}
-				>
-					<div>
-						<Intro/>
-					</div>
-				</Tween>
-			</MainSection>
-			<MainBackground>
-				<MainBuildingImg
-					src={contentImage}
-					alt=""
-				/>
+                <Tween
+                    from={{
+                        opacity: 1,
+                        x: 0
+                    }}
+                    to={{
+                        opacity: 0,
+                        x: '-40vw'
+                    }}
+                    paused
+                    totalProgress={currentProgress}
+                >
+                    <div style={{
+                    }}>
+                        <Intro/>
+                    </div>
+                </Tween>
+            </MainSection>
+            <MainBackground>
+                <MainBuildingImg
+                    src={contentImage}
+                    alt=""
+                />
 
-				<HeaderLink
-					onClick={executeScroll}
-					className={'header-absolute'}
-					style={{position: 'absolute', display: 'none'}}
-				>Contact</HeaderLink>
-			</MainBackground>
-		</MainWrapper>);
+                <HeaderLink
+                    onClick={executeScroll}
+                    className={'header-absolute'}
+                    style={{position: 'absolute', display: 'none'}}
+                >Contact</HeaderLink>
+            </MainBackground>
+        </MainWrapper>);
 };
 
 export default Main;
