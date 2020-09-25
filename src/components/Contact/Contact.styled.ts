@@ -341,19 +341,20 @@ export const ContactSection = styled.div`
     `
 export const ContactText = styled.div`  
     text-align: left;
-    font: normal normal normal 32px/40px Optima;
-    letter-spacing: 0px;
+    font: normal normal normal 18px/32px Optima;
+    letter-spacing: 1px;
     color: #FFFFFF;
     margin-bottom: 80px;
     user-select: none;
+    text-transform: uppercase;
     @media (max-width: ${size.desktop}) {
-        font: normal normal normal 24px/32px Optima;
+        font: normal normal normal 16px/32px Optima;
     }
     @media (max-width: ${size.laptop}) {
        margin-bottom: 64px;
     }
     @media (max-width: ${size.tablet}) {
-       font: normal normal normal 16px/22px Optima;
+       font: normal normal normal 14px/32px Optima;
        margin-bottom: 40px;
     }
     

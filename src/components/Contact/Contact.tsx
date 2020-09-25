@@ -45,8 +45,7 @@ const Contact: FC<IProps> = ({contactRef, windowWidth}) => {
     return (
         <ContactSection ref={contactFormRef}>
             <ContactText>
-                Register below to receive more information about Parkhouse, and to schedule a private tour. Please share
-                the best way to reach you, and a member of our Sales Team will contact you soon.
+                To stay updated about Parkhouse please register below and we will keep you informed. Thank you.
             </ContactText>
 
             <ContactLine/>

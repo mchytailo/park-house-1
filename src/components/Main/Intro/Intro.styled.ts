@@ -24,6 +24,24 @@ export const IntroWrapper = styled.div`
         padding-right: 0;
     }
     `
+export const IntroHeader = styled.p`
+    margin: 0;
+    text-align: left;
+    font: normal normal normal 30px/40px Optima;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    margin-bottom: 46px;
+    
+     @media (max-width: ${size.desktop}) {
+        font: normal normal normal 28px/40px Optima;
+    }
+    @media (max-width: ${size.laptop}) {
+        margin-bottom: 30px;
+    }
+    @media (max-width: ${size.mobile}) { 
+        font: normal normal normal 18px/30px Optima;
+    }
+    `
 export const IntroText = styled.p`
     margin: 0;
     text-align: left;
@@ -32,14 +50,14 @@ export const IntroText = styled.p`
     color: #FFFFFF;
     margin-bottom: 56px;
     
-    @media (max-width: ${size.desktop}) {
-        font: normal normal normal 20px/34px Optima;
+     @media (max-width: ${size.desktop}) {
+        font: normal normal normal 19px/30px Optima;
     }
     @media (max-width: ${size.laptop}) {
         margin-bottom: 40px;
     }
     @media (max-width: ${size.mobile}) { 
-        font: normal normal normal 18px/32px Optima;
+        font: normal normal normal 16px/30px Optima;
     }
     `
 

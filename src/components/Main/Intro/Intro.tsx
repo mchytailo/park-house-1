@@ -1,18 +1,19 @@
 import React, {FC} from 'react';
-import {IntroLabel, IntroText, IntroWrapper} from "./Intro.styled";
+import {IntroHeader, IntroLabel, IntroText, IntroWrapper} from "./Intro.styled";
 
 const Intro: FC = () => {
     return (
         <IntroWrapper>
+            <IntroHeader>
+                LIVE WITH EASE
+            </IntroHeader>
             <IntroText>
-                Newport Beach residences designed for effortless living.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.
+                Introducing Parkhouse. Luxurious full floor and half floor boutique
+                Newport Beach residences designed for absolute ease of living.
             </IntroText>
-            <IntroLabel>Luxury condominium residences</IntroLabel>
-            <IntroLabel>Starting from $1.9M</IntroLabel>
-            <IntroLabel>Sales begin early 2021</IntroLabel>
+            <IntroLabel>3 BEDROOM AND PENTHOUSES</IntroLabel>
+            <IntroLabel>STARTING FROM $1.9M</IntroLabel>
+            <IntroLabel>SALES BEGIN EARLY 2021</IntroLabel>
         </IntroWrapper>
     )
 }
