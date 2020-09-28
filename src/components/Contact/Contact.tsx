@@ -22,9 +22,11 @@ const Contact: FC<IProps> = ({contactRef, windowWidth}) => {
     const logSubmit = () => {
         const checkErrors = document.getElementsByClassName('ao-form-error').length;
         if (!checkErrors && contactRef && contactRef.current) {
-            window.scrollTo({
-                top: contactRef.current.offsetTop || 0,
-            })
+            if(windowWidth < 992){
+                window.scrollTo({
+                    top: contactRef.current.offsetTop || 0,
+                })
+            }
             let contactText = contactRef.current.getElementsByClassName('contact-text')[0] as HTMLElement;
             let contactLine = contactRef.current.getElementsByClassName('contact-line')[0] as HTMLElement;
             let contactHeader = contactRef.current.getElementsByClassName('contact-header')[0] as HTMLElement;
@@ -35,7 +37,7 @@ const Contact: FC<IProps> = ({contactRef, windowWidth}) => {
     }
 
     useEffect(() => {
-        if (!form && counter < 20 && windowWidth < 992) {
+        if (!form && counter < 20) {
             const interval = setInterval(() => {
                 setCounter(count => count + 1)
                 const getForm = document.getElementById('ao-form-65a7048d-2c63-41a9-86d3-c56af2931016');
