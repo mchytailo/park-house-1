@@ -360,17 +360,13 @@ export const ContactText = styled.div`
     
     `
 export const ContactHeader = styled.h2`  
-    font: normal normal normal 48px/48px Optima;
-    letter-spacing: 12.67px;
+    font: normal normal normal 28px/48px Optima;
+    letter-spacing: 6px;
     color: #FFFFFF;
     text-transform: uppercase;
     margin-bottom: 70px;
     user-select: none;
     
-    @media (max-width: ${size.desktop}) {
-        font: normal normal normal 40px/48px Optima;
-        letter-spacing: 8px;
-    }
     @media (max-width: ${size.laptop}) {
        font: normal normal normal 36px/44px Optima;
        letter-spacing: 7px;

@@ -27,14 +27,11 @@ export const IntroWrapper = styled.div`
 export const IntroHeader = styled.p`
     margin: 0;
     text-align: left;
-    font: normal normal normal 30px/40px Optima;
-    letter-spacing: 0px;
+    font: normal normal normal 28px/40px Optima;
+    letter-spacing: 6px;
     color: #FFFFFF;
     margin-bottom: 46px;
     
-     @media (max-width: ${size.desktop}) {
-        font: normal normal normal 28px/40px Optima;
-    }
     @media (max-width: ${size.laptop}) {
         margin-bottom: 30px;
     }
@@ -45,14 +42,11 @@ export const IntroHeader = styled.p`
 export const IntroText = styled.p`
     margin: 0;
     text-align: left;
-    font: normal normal normal 25px/40px Optima;
-    letter-spacing: 0px;
+    font: normal normal normal 19px/30px Optima;
+    letter-spacing: 1px;
     color: #FFFFFF;
     margin-bottom: 56px;
     
-     @media (max-width: ${size.desktop}) {
-        font: normal normal normal 19px/30px Optima;
-    }
     @media (max-width: ${size.laptop}) {
         margin-bottom: 40px;
     }
