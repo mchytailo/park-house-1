@@ -21,7 +21,7 @@ const Contact: FC<IProps> = ({contactRef, windowWidth}) => {
 
     const logSubmit = () => {
         const checkErrors = document.getElementsByClassName('ao-form-error').length;
-		if(!checkErrors && windowWidth < 992 && contactRef && contactRef.current){
+		if(!checkErrors && contactRef && contactRef.current){
 			window.scrollTo({
 				top: contactRef.current.offsetTop || 0,
 			})
