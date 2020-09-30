@@ -21,10 +21,12 @@ const Contact: FC<IProps> = ({contactRef, windowWidth}) => {
 
     const logSubmit = () => {
         const checkErrors = document.getElementsByClassName('ao-form-error').length;
-		if(!checkErrors && contactRef && contactRef.current){
-			window.scrollTo({
-				top: contactRef.current.offsetTop || 0,
-			})
+		if(!checkErrors){
+		    setTimeout(()=>{
+                window.scrollTo({
+                    top: contactRef && contactRef.current && contactRef.current.offsetTop || 0,
+                })
+            },1000)
 		}
         if (!checkErrors && contactFormRef && contactFormRef.current) {
             let contactText = contactFormRef.current.getElementsByClassName('contact-text')[0] as HTMLElement;
