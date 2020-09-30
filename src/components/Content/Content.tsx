@@ -36,7 +36,6 @@ const Content: FC<IProps> = ({contactRef, windowWidth, currentProgress}) => {
             <ContentSection
                 style={{position: currentProgress === 1 ? 'relative' : 'fixed'}}>
                 <Contact
-                    contactRef={contactRef}
                     windowWidth={windowWidth}
                 />
                 <Footer/>

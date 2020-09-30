@@ -1,13 +1,12 @@
-import React, {FC, RefObject, useEffect, useRef, useState} from 'react';
+import React, {FC, useEffect, useRef, useState} from 'react';
 import {ContactHeader, ContactLine, ContactSection, ContactText} from "./Contact.styled";
 import contactEmbed from './contactEmbed'
 
 interface IProps {
-    contactRef: RefObject<HTMLDivElement> | null,
     windowWidth: number
 }
 
-const Contact: FC<IProps> = ({contactRef, windowWidth}) => {
+const Contact: FC<IProps> = ({windowWidth}) => {
     const [form, setForm] = useState<HTMLElement | null>(null)
     const [counter, setCounter] = useState<number>(0)
     const contactFormRef = useRef<HTMLDivElement>(null);
@@ -21,18 +20,18 @@ const Contact: FC<IProps> = ({contactRef, windowWidth}) => {
 
     const logSubmit = () => {
         const checkErrors = document.getElementsByClassName('ao-form-error').length;
-        if (!checkErrors && contactRef && contactRef.current) {
+        if (!checkErrors && contactFormRef && contactFormRef.current) {
             if(windowWidth < 992){
                 window.scrollTo({
-                    top: contactRef.current.offsetTop || 0,
+                    top: contactFormRef.current.offsetTop || 0,
                 })
             }
-            let contactText = contactRef.current.getElementsByClassName('contact-text')[0] as HTMLElement;
-            let contactLine = contactRef.current.getElementsByClassName('contact-line')[0] as HTMLElement;
-            let contactHeader = contactRef.current.getElementsByClassName('contact-header')[0] as HTMLElement;
-            contactRef.current.removeChild(contactText);
-            contactRef.current.removeChild(contactLine);
-            contactRef.current.removeChild(contactHeader);
+            let contactText = contactFormRef.current.getElementsByClassName('contact-text')[0] as HTMLElement;
+            let contactLine = contactFormRef.current.getElementsByClassName('contact-line')[0] as HTMLElement;
+            let contactHeader = contactFormRef.current.getElementsByClassName('contact-header')[0] as HTMLElement;
+            contactFormRef.current.removeChild(contactText);
+            contactFormRef.current.removeChild(contactLine);
+            contactFormRef.current.removeChild(contactHeader);
         }
     }
 
