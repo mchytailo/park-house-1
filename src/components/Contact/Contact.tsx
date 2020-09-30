@@ -14,7 +14,7 @@ const Contact: FC<IProps> = ({windowWidth}) => {
         const script = document.createElement("script");
         script.innerHTML = contactEmbed;
         script.type = 'text/javascript';
-        script.id = 'aoform-script-65a7048d-2c63-41a9-86d3-c56af2931016:d-0004';
+        script.id = 'aoform-script-3412f86b-f457-4477-bd83-d4369fffda7f:d-0001';
         contactFormRef && contactFormRef.current && contactFormRef.current.appendChild(script);
     }, [contactFormRef])
 
@@ -39,7 +39,7 @@ const Contact: FC<IProps> = ({windowWidth}) => {
         if (!form && counter < 20) {
             const interval = setInterval(() => {
                 setCounter(count => count + 1)
-                const getForm = document.getElementById('ao-form-65a7048d-2c63-41a9-86d3-c56af2931016');
+                const getForm = document.getElementById('ao-form-3412f86b-f457-4477-bd83-d4369fffda7f');
                 setForm(getForm);
                 if (getForm)
                     getForm.addEventListener('submit', logSubmit)
