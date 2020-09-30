@@ -3,11 +3,10 @@ import {ContactHeader, ContactLine, ContactSection, ContactText} from "./Contact
 import contactEmbed from './contactEmbed'
 
 interface IProps {
-	contactRef: RefObject<HTMLDivElement> | null,
-    windowWidth: number
+	contactRef: RefObject<HTMLDivElement> | null
 }
 
-const Contact: FC<IProps> = ({contactRef, windowWidth}) => {
+const Contact: FC<IProps> = ({contactRef}) => {
     const [form, setForm] = useState<HTMLElement | null>(null)
     const [counter, setCounter] = useState<number>(0)
     const contactFormRef = useRef<HTMLDivElement>(null);
@@ -15,7 +14,7 @@ const Contact: FC<IProps> = ({contactRef, windowWidth}) => {
         const script = document.createElement("script");
         script.innerHTML = contactEmbed;
         script.type = 'text/javascript';
-        script.id = 'aoform-script-65a7048d-2c63-41a9-86d3-c56af2931016:d-0004';
+        script.id = 'aoform-script-ba9f5779-a415-49dc-b78f-9245a825b908:d-0002';
         contactFormRef && contactFormRef.current && contactFormRef.current.appendChild(script);
     }, [contactFormRef])
 
@@ -42,7 +41,7 @@ const Contact: FC<IProps> = ({contactRef, windowWidth}) => {
         if (!form && counter < 20) {
             const interval = setInterval(() => {
                 setCounter(count => count + 1)
-                const getForm = document.getElementById('ao-form-65a7048d-2c63-41a9-86d3-c56af2931016');
+                const getForm = document.getElementById('ao-form-ba9f5779-a415-49dc-b78f-9245a825b908');
                 setForm(getForm);
                 if (getForm)
                     getForm.addEventListener('submit', logSubmit)
